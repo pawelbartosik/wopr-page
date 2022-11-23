@@ -5,3 +5,15 @@
   margin-top: 0.5rem;
   margin-right: 0.5rem;
 }
+
+.ant-select-selector {
+  background-color: green;
+}
+
+/* .selectLanguage input {
+  background-color: transparent;
+}
+
+.ant-select-selection-search {
+  background-color: transparent;
+} */

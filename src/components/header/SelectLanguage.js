@@ -12,6 +12,9 @@ const SelectLanguage = () => {
         className={styles.selectLanguage}
         defaultValue="pl"
         placement="bottomRight"
+        dropdownStyle={{
+          backgroundColor: "transparent",
+        }}
         style={{
           width: 120,
         }}
