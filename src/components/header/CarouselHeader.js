@@ -1,26 +1,31 @@
 import React from "react";
 import { Carousel } from "antd";
-const contentStyle = {
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
-};
+import photo1 from "../../assets/photo1.png";
+import photo2 from "../../assets/photo2.png";
+import photo3 from "../../assets/photo3.png";
+import styles from "./CarouselHeader.module.css";
+
 const CarouselHeader = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: false,
+    effect: "fade",
+  };
+
   return (
-    <Carousel autoplay>
+    <Carousel {...settings} className={styles.carouselStyle}>
       <div>
-        <h3 style={contentStyle}>1</h3>
+        <img src={photo3} alt="Photo3" />
       </div>
       <div>
-        <h3 style={contentStyle}>2</h3>
+        <img src={photo2} alt="Photo2" />
       </div>
       <div>
-        <h3 style={contentStyle}>3</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>4</h3>
+        <img src={photo1} alt="Photo1" />
       </div>
     </Carousel>
   );
