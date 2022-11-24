@@ -1,10 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+
 body {
+  --color-primary-500: rgb(43, 33, 33);
+  --color-black-500: rgba(0, 0, 0, 0.8);
+  --color-white-200: rgb(228, 222, 222);
+
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-white-200);
 }
 
 code {
