@@ -13,7 +13,7 @@ const SelectLanguage = () => {
         defaultValue="pl"
         placement="bottomRight"
         dropdownStyle={{
-          backgroundColor: "transparent",
+          backgroundColor: "rgba(255, 255, 255, 0.5)",
         }}
         style={{
           width: 120,
