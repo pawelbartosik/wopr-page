@@ -3,7 +3,7 @@ import styles from "./AboutUs.module.css";
 const AboutUs = () => {
   return (
     <div className={styles.aboutUs}>
-      <h2>O nas</h2>
+      <h2>WOPR</h2>
       <p>
         WOPR jest specjalistycznym stowarzyszeniem o zasięgu ogólnokrajowym,
         powstałym na podstawie zarządzenia nr 74 Przewodniczącego Głównego
