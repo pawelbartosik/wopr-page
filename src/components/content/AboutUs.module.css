@@ -37,7 +37,6 @@
   display: block;
   margin-top: 3rem;
   cursor: pointer;
-  /* transition: 1s ease; */
   transition: 1s ease;
   background: linear-gradient(
       to left,
@@ -50,7 +49,6 @@
 
 .aboutUs a:hover,
 a:active {
-  /* background-color: var(--color-black-900); */
   background-position: left;
   color: var(--color-white-200);
 }

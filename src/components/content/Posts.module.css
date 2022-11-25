@@ -1,3 +1,91 @@
 .posts {
   background-color: var(--color-white-100);
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.posts h2 {
+  width: 20rem;
+  font-size: 2.2rem;
+  margin: 1rem auto 1rem auto;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--color-black-900);
+  color: var(--color-black-900);
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.postItem {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  height: 25rem;
+  margin: 3rem auto 3rem auto;
+  border: 2px solid var(--color-black-900);
+}
+
+.imgContainer {
+  height: 100%;
+  width: 50%;
+}
+
+.postItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contentContainer {
+  height: 23rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--color-black-900);
+  padding: 1rem;
+}
+
+.contentContainer h3 {
+  width: 15rem;
+  font-size: 2.5rem;
+  margin: 1rem auto 1rem auto;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--color-black-900);
+  letter-spacing: 8px;
+  font-weight: bold;
+}
+
+.contentContainer p {
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+}
+
+.contentContainer a {
+  font-family: inherit;
+  border: 2px solid var(--color-black-900);
+  padding: 1rem 4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.25rem;
+  /* width: ; */
+  display: block;
+  /* margin-top: 3rem; */
+  cursor: pointer;
+  transition: 1s ease;
+  background: linear-gradient(
+      to left,
+      var(--color-white-100) 50%,
+      var(--color-black-900) 50%
+    )
+    right;
+  background-size: 200% 100%;
+}
+
+.contentContainer a:hover,
+a:active {
+  background-position: left;
+  color: var(--color-white-200);
 }

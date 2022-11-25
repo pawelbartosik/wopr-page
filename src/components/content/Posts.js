@@ -1,23 +1,44 @@
 import styles from "./Posts.module.css";
+import PostItem from "./PostItem";
+import photo1 from "../../assets/photo1.png";
+import photo2 from "../../assets/photo2.png";
+import photo3 from "../../assets/photo3.png";
+
+const postsContent = [
+  {
+    title: "Tytuł 1",
+    paragraph:
+      "Jakiś krótki opis posta, na dole jak klikniesz to przekierowanie do tego posta na insta czy fb",
+    imgSrc: photo1,
+  },
+  {
+    title: "Tytuł 2",
+    paragraph:
+      "Jakiś krótki opis posta, na dole jak klikniesz to przekierowanie do tego posta na insta czy fb",
+    imgSrc: photo2,
+  },
+  {
+    title: "Tytuł 3",
+    paragraph:
+      "Jakiś krótki opis posta, na dole jak klikniesz to przekierowanie do tego posta na insta czy fb",
+    imgSrc: photo3,
+  },
+];
 
 const Posts = () => {
   return (
     <div className={styles.posts}>
       <h2>Aktualności</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-        mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-        voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-        fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
-        accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut
-        molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
-        officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum
-        nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque
-        error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis
-        modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias
-        error harum maxime adipisci amet laborum.
-      </p>
-      {/* tutaj komponent z 3 postami */}
+      {postsContent.map((item) => {
+        return (
+          <PostItem
+            key={item.title}
+            title={item.title}
+            paragraph={item.paragraph}
+            imgSrc={item.imgSrc}
+          />
+        );
+      })}
     </div>
   );
 };
