@@ -1,7 +1,7 @@
 .posts {
   background-color: var(--color-white-100);
   text-align: center;
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 
 .posts h2 {
@@ -18,10 +18,10 @@
 .postItem {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 60%;
   height: 25rem;
   margin: 3rem auto 3rem auto;
-  border: 2px solid var(--color-black-900);
+  /* border: 2px solid var(--color-black-900); */
 }
 
 .imgContainer {
@@ -33,16 +33,21 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20%;
+  transition: 1s ease;
+}
+
+.postItem:hover img {
+  border-radius: 0%;
 }
 
 .contentContainer {
-  height: 23rem;
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: var(--color-black-900);
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .contentContainer h3 {
@@ -70,9 +75,7 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.25rem;
-  /* width: ; */
   display: block;
-  /* margin-top: 3rem; */
   cursor: pointer;
   transition: 1s ease;
   background: linear-gradient(
@@ -88,4 +91,21 @@
 a:active {
   background-position: left;
   color: var(--color-white-200);
+}
+
+@media (max-width: 768px) {
+  .postItem {
+    flex-direction: column;
+    width: 80%;
+    height: 40rem;
+  }
+  .imgContainer {
+    height: 50%;
+    width: 100%;
+  }
+  .contentContainer {
+    height: 50%;
+    width: 100%;
+    padding: 0;
+  }
 }
