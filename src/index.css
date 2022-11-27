@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 
 body {
   --color-black-500: rgb(43, 33, 33);
@@ -11,19 +11,18 @@ body {
   --color-white-100: #ffffff;
 
   margin: 0;
-  /* font-family: "Inter", sans-serif; */
   font-family: "Quicksand", sans-serif;
   background-color: var(--color-white-200);
   box-sizing: border-box;
 }
 
-/* to do zmiany jeszcze */
-
 .ant-select-selector {
-  background-color: rgba(255, 255, 255, 0.5) !important;
-  border-color: rgba(255, 255, 255, 0.5) !important;
+  background-image: url("./assets/background2.gif");
+  background-size: cover;
 }
 
-.ant-select-selector:hover {
-  border-color: rgba(255, 255, 255, 0.5) !important;
+.ant-select-selector span {
+  color: var(--color-white-100);
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 2px;
 }

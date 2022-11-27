@@ -1,19 +1,22 @@
 import React from "react";
 import { Select } from "antd";
 import styles from "./SelectLanguage.module.css";
+import background from "../../assets/background2.gif";
 
 const handleChange = (value) => {
   console.log(`selected ${value}`);
 };
 const SelectLanguage = () => {
   return (
-    <>
+    <div className={styles.bar}>
+      <h2>WOPR</h2>
       <Select
         className={styles.selectLanguage}
         defaultValue="pl"
         placement="bottomRight"
         dropdownStyle={{
-          backgroundColor: "rgba(255, 255, 255, 0.5)",
+          fontFamily: "Quicksand",
+          letterSpacing: "2px",
         }}
         style={{
           width: 120,
@@ -23,12 +26,6 @@ const SelectLanguage = () => {
           {
             value: "pl",
             label: "Polski",
-            // style: {
-            //   color: "red",
-            //   background: "rgb(255,255,255)",
-            //   background:
-            //     "linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(255,0,0,1) 100%)",
-            // },
           },
           {
             value: "en",
@@ -40,7 +37,7 @@ const SelectLanguage = () => {
           },
         ]}
       />
-    </>
+    </div>
   );
 };
 
