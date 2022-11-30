@@ -1,7 +1,6 @@
 import React from "react";
 import { Select } from "antd";
 import styles from "./SelectLanguage.module.css";
-import background from "../../assets/background2.gif";
 
 const handleChange = (value) => {
   console.log(`selected ${value}`);
