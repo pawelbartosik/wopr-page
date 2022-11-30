@@ -1,6 +1,14 @@
+import React, { useState } from "react";
 import styles from "./AboutUs.module.css";
+import StaffModal from "./StaffModal";
 
 const AboutUs = () => {
+  const [open, setOpen] = useState(false);
+
+  const closeModalHandler = () => {
+    setOpen(false);
+  };
+
   return (
     <div className={styles.aboutUs}>
       <h2>WOPR</h2>
@@ -12,7 +20,8 @@ const AboutUs = () => {
         Spraw Wewnętrznych. Jednostki WOPR są jednostkami współpracującymi z
         systemem Państwowego Ratownictwa Medycznego.
       </p>
-      <a>Zarząd</a>
+      <a onClick={() => setOpen(true)}>Zarząd</a>
+      <StaffModal closeModal={closeModalHandler} openModal={open} />
     </div>
   );
 };
