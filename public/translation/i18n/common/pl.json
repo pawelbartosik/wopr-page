@@ -1,0 +1,34 @@
+{
+  "aboutUs": {
+    "content": "WOPR jest specjalistycznym stowarzyszeniem o zasięgu ogólnokrajowym, powstałym na podstawie zarządzenia nr 74 Przewodniczącego Głównego Komitetu Kultury Fizycznej z dnia 11 kwietnia 1962 roku, uzyskało osobowość prawną 9 października 1967 roku na podstawie decyzji Ministra Spraw Wewnętrznych. Jednostki WOPR są jednostkami współpracującymi z systemem Państwowego Ratownictwa Medycznego.",
+    "staff": "Zarząd",
+    "staff1": {
+      "description": "Opis osoby, tutaj jakiś odpowiednio długi, co robi czym się zajmuje"
+    },
+    "staff2": {
+      "description": "Opis osoby, tutaj jakiś odpowiednio długi, co robi czym się zajmuje"
+    },
+    "staff3": {
+      "description": "Opis osoby, tutaj jakiś odpowiednio długi, co robi czym się zajmuje"
+    }
+  },
+  "posts": {
+    "title": "Aktualności",
+    "button": "Zobacz sobie",
+    "post1": {
+      "title": "Tytuł 1",
+      "content": "Jakiś krótki opis posta, na dole jak klikniesz to przekierowanie do tego posta na insta czy fb"
+    },
+    "post2": {
+      "title": "Tytuł 2",
+      "content": "Jakiś krótki opis posta, na dole jak klikniesz to przekierowanie do tego posta na insta czy fb"
+    },
+    "post3": {
+      "title": "Tytuł 3",
+      "content": "Jakiś krótki opis posta, na dole jak klikniesz to przekierowanie do tego posta na insta czy fb"
+    }
+  },
+  "followUs": {
+    "title": "Obserwuj nas"
+  }
+}

@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Select } from "antd";
 import styles from "./SelectLanguage.module.css";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
-const handleChange = (value) => {
-  console.log(`selected ${value}`);
-};
 const SelectLanguage = () => {
+  const { i18n, t } = useTranslation(["common"]);
+
+  useEffect(() => {
+    if (localStorage.getItem("i18nextLng")?.length > 2) {
+      i18next.changeLanguage("pl");
+    }
+  }, []);
+
+  const handleLanguageChange = (len) => {
+    i18n.changeLanguage(len);
+  };
+
   return (
     <div className={styles.bar}>
       <h2>WOPR</h2>
@@ -20,7 +31,7 @@ const SelectLanguage = () => {
         style={{
           width: 120,
         }}
-        onChange={handleChange}
+        onChange={handleLanguageChange}
         options={[
           {
             value: "pl",
