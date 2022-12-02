@@ -12,15 +12,11 @@
 
 .bar h2 {
   margin: auto 0 auto 1rem;
-
   font-family: "Alfa Slab One", cursive;
   font-size: 2.5rem;
   letter-spacing: 5px;
   line-height: 2rem;
-  background-image: url("../../assets/background2.gif");
-  background-size: 30%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-white-200);
 }
 
 .selectLanguage {
