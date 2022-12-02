@@ -15,7 +15,7 @@ const AboutUs = () => {
     <div className={styles.aboutUs}>
       <h2>WOPR</h2>
       <p>{t("aboutUs.content")}</p>
-      <a onClick={() => setOpen(true)}>Zarząd</a>
+      <a onClick={() => setOpen(true)}>{t("aboutUs.staff")}</a>
       <StaffModal closeModal={closeModalHandler} openModal={open} />
     </div>
   );

@@ -1,34 +1,34 @@
 import styles from "./Posts.module.css";
 import PostItem from "./PostItem";
+import { useTranslation } from "react-i18next";
 import photo1 from "../../assets/photo1.png";
 import photo2 from "../../assets/photo2.png";
 import photo3 from "../../assets/photo3.png";
 
 const postsContent = [
   {
-    title: "Tytuł 1",
-    paragraph:
-      "Jakiś krótki opis posta, na dole jak klikniesz to przekierowanie do tego posta na insta czy fb",
+    title: "posts.post1.title",
+    paragraph: "posts.post1.content",
     imgSrc: photo1,
   },
   {
-    title: "Tytuł 2",
-    paragraph:
-      "Jakiś krótki opis posta, na dole jak klikniesz to przekierowanie do tego posta na insta czy fb",
+    title: "posts.post2.title",
+    paragraph: "posts.post2.content",
     imgSrc: photo2,
   },
   {
-    title: "Tytuł 3",
-    paragraph:
-      "Jakiś krótki opis posta, na dole jak klikniesz to przekierowanie do tego posta na insta czy fb",
+    title: "posts.post3.title",
+    paragraph: "posts.post3.content",
     imgSrc: photo3,
   },
 ];
 
 const Posts = () => {
+  const { t } = useTranslation(["common"]);
+
   return (
     <div className={styles.posts}>
-      <h2>Aktualności</h2>
+      <h2>{t("posts.title")}</h2>
       {postsContent.map((item) => {
         return (
           <PostItem

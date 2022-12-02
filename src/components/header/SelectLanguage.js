@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
 const SelectLanguage = () => {
-  const { i18n, t } = useTranslation(["common"]);
+  const { i18n } = useTranslation(["common"]);
 
   useEffect(() => {
     if (localStorage.getItem("i18nextLng")?.length > 2) {
@@ -22,7 +22,7 @@ const SelectLanguage = () => {
       <h2>WOPR</h2>
       <Select
         className={styles.selectLanguage}
-        defaultValue="pl"
+        defaultValue={i18n.language}
         placement="bottomRight"
         dropdownStyle={{
           fontFamily: "Quicksand",

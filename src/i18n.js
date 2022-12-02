@@ -9,14 +9,10 @@ i18n
   .use(initReactI18next)
   .init({
     backend: {
-      // translation file path
       loadPath: "/translation/i18n/{{ns}}/{{lng}}.json",
     },
     fallbackLng: "pl",
-    // disabled in production
     debug: false,
-    // can have multiple namespaces, in case you want to divide a huge
-    // translation into smaller pieces and load them on demand
     ns: ["common"],
 
     interpolation: {

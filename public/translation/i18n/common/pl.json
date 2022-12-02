@@ -14,7 +14,7 @@
   },
   "posts": {
     "title": "Aktualności",
-    "button": "Zobacz sobie",
+    "button": "Sprawdź",
     "post1": {
       "title": "Tytuł 1",
       "content": "Jakiś krótki opis posta, na dole jak klikniesz to przekierowanie do tego posta na insta czy fb"
@@ -30,5 +30,6 @@
   },
   "followUs": {
     "title": "Obserwuj nas"
-  }
+  },
+  "close": "Zamknij"
 }

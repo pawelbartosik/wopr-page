@@ -4,7 +4,6 @@ import AboutUs from "./components/content/AboutUs";
 import Posts from "./components/content/Posts";
 import Footer from "./components/footer/Footer";
 import styles from "./App.module.css";
-import LangContext from "./components/store/lang-context";
 
 const App = () => {
   return (
