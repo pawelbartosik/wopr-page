@@ -25,6 +25,7 @@
   width: 7rem;
   height: 7rem;
   transition: 1s ease;
+  cursor: pointer;
 }
 
 .svg:hover,
