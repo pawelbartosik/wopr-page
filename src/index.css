@@ -15,11 +15,17 @@ body {
 .ant-select-selector {
   /* background-image: url("./assets/background2.gif"); */
   /* background-size: cover; */
-  background-color: var(--color-black-900) !important;
+  /* background-color: var(--color-black-900) !important; */
+}
+
+.ant-modal-title {
+  text-align: center !important;
+  font-size: 2rem !important;
+  text-transform: uppercase !important;
 }
 
 .ant-select-selector span {
-  color: var(--color-white-100);
+  color: var(--color-black-900);
   font-family: "Quicksand", sans-serif;
   letter-spacing: 2px;
 }
