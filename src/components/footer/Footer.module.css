@@ -38,6 +38,11 @@
   fill: rgb(245, 96, 64);
 }
 
+.author {
+  text-decoration: none;
+  color: var(--color-black-900);
+}
+
 @media (max-width: 768px) {
   .footer h2 {
     width: 20rem;

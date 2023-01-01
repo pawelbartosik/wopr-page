@@ -16,7 +16,15 @@ const Footer = () => {
         <FacebookSvg className={styles.svg} />
         <InstagramSvg className={[styles.svg, styles.svgIg].join(" ")} />
       </div>
-      <small>&copy; Copyright 2022-{currentYear}, Paweł Bartosik</small>
+      <small>
+        &copy; Copyright 2022-{currentYear},{" "}
+        <a
+          className={styles.author}
+          href="https://www.linkedin.com/in/pawe%C5%82-bartosik-2b3713170/"
+        >
+          Paweł Bartosik
+        </a>
+      </small>
     </div>
   );
 };
