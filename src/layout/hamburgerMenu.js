@@ -1,37 +1,36 @@
-import { slide as BurgerMenu } from "react-burger-menu";
-// import { FaBars } from "react-icons/fa";
+import { useState } from "react";
+import "./HamburgerMenu.css";
 
-const MyBurgerMenu = () => {
-  const menuStyles = {
-    bmMenu: {
-      zIndex: 1000,
-      width: 20,
-      height: 20,
-    },
+const HamburgerMenu = () => {
+  const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
+  const [menu_class, setMenuClass] = useState("menu hidden");
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
+
+  // toggle burger menu change
+  const updateMenu = () => {
+    if (!isMenuClicked) {
+      setBurgerClass("burger-bar clicked");
+      setMenuClass("menu visible");
+    } else {
+      setBurgerClass("burger-bar unclicked");
+      setMenuClass("menu hidden");
+    }
+    setIsMenuClicked(!isMenuClicked);
   };
 
   return (
-    <BurgerMenu
-      styles={menuStyles}
-      //   w devtoolsach znalazłem burgera
+    <div>
+      <nav>
+        <div className="burger-menu" onClick={updateMenu}>
+          <div className={burger_class}></div>
+          <div className={burger_class}></div>
+          <div className={burger_class}></div>
+        </div>
+      </nav>
 
-      //   customBurgerIcon={
-      //     <FaBars style={{ color: "red", width: "20px", height: "20px" }} />
-      //   }
-    >
-      <a className="menu-item" href="/">
-        Home
-      </a>
-
-      <a className="menu-item" href="/about">
-        About
-      </a>
-
-      <a className="menu-item" href="/contact">
-        Contact
-      </a>
-    </BurgerMenu>
+      <div className={menu_class}></div>
+    </div>
   );
 };
 
-export default MyBurgerMenu;
+export default HamburgerMenu;
