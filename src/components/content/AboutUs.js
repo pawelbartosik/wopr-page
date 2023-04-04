@@ -3,7 +3,6 @@ import styles from "./AboutUs.module.css";
 import StaffModal from "./StaffModal";
 import { useTranslation } from "react-i18next";
 import SelectLanguage from "./SelectLanguage";
-import HamburgerMenu from "../../layout/HamburgerMenu";
 
 const AboutUs = () => {
   const { t } = useTranslation(["common"]);
@@ -15,9 +14,6 @@ const AboutUs = () => {
 
   return (
     <>
-      <div className={styles.hamburgerMenu}>
-        <HamburgerMenu />
-      </div>
       <div className={styles.language}>
         <SelectLanguage />
       </div>

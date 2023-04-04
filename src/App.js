@@ -6,6 +6,7 @@ import Posts from "./components/content/Posts";
 import Sponsors from "./components/content/Sponsors";
 import Footer from "./components/footer/Footer";
 import styles from "./App.module.css";
+import HamburgerMenu from "./layout/HamburgerMenu";
 
 const App = () => {
   const [ref, inView, entry] = useInView({
@@ -16,6 +17,7 @@ const App = () => {
 
   return (
     <Suspense fallback={null}>
+      <HamburgerMenu />
       <Header />
       <div ref={ref} className={styles.content}>
         <AboutUs />
