@@ -11,7 +11,7 @@ const HamburgerMenu = () => {
   const burgerClass = !isMenuClicked
     ? "burger-bar unclicked"
     : "burger-bar clicked";
-  const menuClass = !isMenuClicked ? "menu hidden" : "menu visible";
+  const menuClass = !isMenuClicked ? "hidden" : "visible";
 
   return (
     <div>
@@ -22,7 +22,11 @@ const HamburgerMenu = () => {
           <div className={burgerClass}></div>
         </div>
       </nav>
-      <div className={menuClass}></div>
+      <div className={`background ${menuClass}`}></div>
+      <div className={`menu ${menuClass}`}>
+        <a>Władze</a>
+        <a>Kontakt</a>
+      </div>
     </div>
   );
 };
