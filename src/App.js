@@ -10,14 +10,12 @@ import HamburgerMenu from "./layout/HamburgerMenu";
 
 const App = () => {
   const [ref, inView, entry] = useInView({
-    threshold: 0.1,
+    threshold: 0.15,
   });
-
-  console.log(inView);
 
   return (
     <Suspense fallback={null}>
-      <HamburgerMenu />
+      <HamburgerMenu hamburgerVisible={inView} />
       <Header />
       <div ref={ref} className={styles.content}>
         <AboutUs />
@@ -29,6 +27,6 @@ const App = () => {
   );
 };
 
-// tutaj w app dodaje hamburgera on jest tylko widoczny gdy jest widoczne cos z contentu i easy zrobione
+// funkcjonalnosc anchorow
 
 export default App;

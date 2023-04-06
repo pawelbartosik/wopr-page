@@ -12,6 +12,17 @@ nav {
   justify-content: flex-start;
   padding: 1rem;
   z-index: 2;
+  transition: opacity 1s;
+}
+
+nav.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .burgerMenu {
@@ -185,14 +196,14 @@ nav {
   }
   100% {
     backdrop-filter: blur(0px);
-    display: none;
+    visibility: hidden;
   }
 }
 
 @keyframes blur {
   0% {
     backdrop-filter: blur(0px);
-    display: inherit;
+    visibility: visible;
   }
   100% {
     backdrop-filter: blur(3px);
