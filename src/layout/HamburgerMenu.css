@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
+  z-index: 2;
+  transition: opacity 1s;
+}
+
+nav.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.burgerMenu {
+  height: 100%;
+  width: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger-bar {
+  width: 4em;
+  height: 0.5em;
+  background-color: var(--color-black-900);
+  border-radius: 0.5em;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+}
+
+.menu {
+  width: 0%;
+  height: 100vh;
+  /* tutaj sobie mozesz kolor dostosowac */
+  background-color: rgb(154, 181, 240);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  padding-top: 5rem;
+  text-align: center;
+  transition: width 2s;
+  display: inherit;
+}
+
+.menu a {
+  display: block;
+  margin: 2rem auto 2rem auto;
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.background.hidden {
+  animation: unBlur 0.5s ease-out forwards;
+}
+
+.background.visible {
+  animation: blur 0.5s ease-out forwards;
+}
+
+.menu.hidden {
+  animation: hideMenu 0.5s ease-out forwards;
+}
+
+.menu.visible {
+  animation: slideMenu 0.5s ease-out forwards;
+}
+
+.menu.hidden a {
+  animation: hideText 0.5s ease-out forwards;
+}
+
+.menu.visible a {
+  animation: showText 0.5s ease-out forwards;
+}
+
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.75em, 1.25em);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0.1);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-0.5em, 1em);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+@keyframes slideMenu {
+  0% {
+    display: inherit;
+  }
+  100% {
+    /* tutaj szerokosc menu */
+    width: 30%;
+  }
+}
+
+@keyframes hideMenu {
+  0% {
+    /* szerokosc menu */
+    width: 30%;
+  }
+  100% {
+    width: 0%;
+    display: none;
+  }
+}
+
+@keyframes slideMenuPhone {
+  0% {
+    display: inherit;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes hideMenuPhone {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+    display: none;
+  }
+}
+
+@keyframes hideText {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes showText {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes unBlur {
+  0% {
+    backdrop-filter: blur(3px);
+  }
+  100% {
+    backdrop-filter: blur(0px);
+    visibility: hidden;
+  }
+}
+
+@keyframes blur {
+  0% {
+    backdrop-filter: blur(0px);
+    visibility: visible;
+  }
+  100% {
+    backdrop-filter: blur(3px);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu.hidden {
+    animation: hideMenuPhone 0.5s ease-out forwards;
+  }
+  .menu.visible {
+    animation: slideMenuPhone 0.5s ease-out forwards;
+  }
+}
